@@ -1,0 +1,11 @@
+<div class="container position-absolute top-50 start-50 translate-middle">
+    <div class="card inner">
+        <h1>Validador de ADN Mutante</h1>
+  <form (ngSubmit)="validateDNA()">
+    <label for="dnaInput">Secuencia de ADN:</label>
+    <input #inputSearch autofocus [(ngModel)]="dnaSequence" name="dnaSequence" type="text" class="form-control-lg">
+    <button type="submit">Validar</button>
+  </form>
+  <p *ngIf="result !== null">Resultado: {{ result ? 'Es mutante' : 'No es mutante' }}</p>
+    </div>
+</div>
